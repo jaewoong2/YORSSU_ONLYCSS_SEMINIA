@@ -1,0 +1,57 @@
+:root {
+  --input-background-color: #8f8f8f73;
+  --button-hover-color: #8090d3cb;
+}
+
+form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: flex-end;
+}
+
+label {
+  margin: 5px 4px;
+}
+
+p {
+  padding: 0;
+  margin: 6px 4px;
+  font-size: 0.85rem;
+}
+
+input {
+  width: 200px;
+  height: 22px;
+  padding: 5px 8px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background-color: var(--input-background-color);
+  border-radius: 8px;
+}
+
+button {
+  width: 50px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 5px 4px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* label:focus-within ~ button,
+label:active ~ button {
+  background-color: var(--button-hover-color);
+} */
+
+label:focus-within + button,
+label:active + button {
+  background-color: var(--button-hover-color);
+}

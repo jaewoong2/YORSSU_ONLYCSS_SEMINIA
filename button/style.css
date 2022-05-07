@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 60px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.button-wrapper {
+  overflow: hidden;
+  width: 60px;
+  height: 35px;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wave {
+  transform: translateY(40px) rotate(0deg);
+  position: absolute;
+  cursor: pointer;
+  left: -80px;
+  top: 0;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 43% 43% 50% 42%;
+  content: "";
+  background-color: rgba(98, 160, 231, 0.644);
+  transition: transform 4s linear;
+}
+
+.button-wrapper:hover > .wave {
+  transform: translateY(-20px) rotate(270deg);
+}
