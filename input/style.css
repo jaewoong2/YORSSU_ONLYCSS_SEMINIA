@@ -46,10 +46,10 @@ button:hover {
   background-color: var(--button-hover-color);
 }
 
-/* label:focus-within ~ button,
-label:active ~ button {
+label[for="input-2"]:focus-within ~ button,
+label[for="input-2"]:active ~ button {
   background-color: var(--button-hover-color);
-} */
+}
 
 label:focus-within + button,
 label:active + button {

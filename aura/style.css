@@ -1,3 +1,11 @@
+:root {
+  --color-red: hsla(0, 58%, 70%, 0.356);
+  --color-green: hsla(120, 54%, 75%, 0.356);
+  --color-blue: hsla(202, 65%, 65%, 0.356);
+  --color-white: hsla(0, 0%, 82%, 0.356);
+  --color-purple: hsla(310, 100%, 83%, 0.356);
+}
+
 html,
 body {
   margin: 0;
@@ -17,17 +25,15 @@ main {
 }
 
 .main-circle {
-  position: absolute;
-  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
-  font-size: 36px;
-  font-weight: 800;
+  position: absolute;
+  z-index: 100;
   background-color: black;
-  border-radius: 50%;
+  height: 50%;
   aspect-ratio: 1 / 1;
+  border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.384);
   z-index: 999;
 }
@@ -46,46 +52,46 @@ main {
   height: 99%;
   aspect-ratio: 1 / 1;
   filter: blur(3px);
+  animation: rotate infinite linear;
   z-index: -1;
 }
 
 .red {
-  background-color: rgba(223, 134, 134, 0.356);
-  border-radius: 44% 50% 45% 47%;
-  animation: rotate 2s infinite linear;
+  background-color: var(--color-red);
+  border-radius: 44% 44% 45% 47%;
+  animation-direction: reverse;
+  animation-duration: 2s;
 }
 
 .green {
-  background-color: rgba(158, 226, 158, 0.356);
-  border-radius: 46% 46% 45% 42%;
-  animation: rotate 3s infinite linear reverse;
+  background-color: var(--color-green);
+  border-radius: 46% 46% 45% 44%;
+  animation-duration: 3s;
 }
 
 .blue {
-  background-color: rgba(107, 181, 224, 0.356);
+  background-color: var(--color-blue);
   border-radius: 44% 41% 45% 50%;
-  animation: rotate 4s infinite linear;
+  animation-duration: 4s;
+  animation-direction: reverse;
 }
 
 .white {
-  background-color: rgba(209, 209, 209, 0.356);
-  border-radius: 50% 45% 45% 45%;
-  animation: rotate 4s infinite linear reverse;
+  background-color: var(--color-white);
+  border-radius: 50% 41% 45% 45%;
+  animation-duration: 5s;
 }
 
 .purple {
   border-radius: 44% 46% 45% 47%;
-  background-color: rgba(255, 169, 241, 0.356);
-  animation: rotate 4s infinite linear;
+  background-color: var(--color-purple);
+  animation-direction: reverse;
+  animation-duration: 6s;
 }
 
 @keyframes rotate {
   0% {
     transform: rotate(0);
-  }
-
-  50% {
-    transform: rotate(180deg);
   }
 
   100% {
